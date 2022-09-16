@@ -104,6 +104,24 @@ footer{
     margin: 70px auto;
     padding: 20px;
     background-color: var(--background);
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.wrapper h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.close:hover {
+    color: red;
 }
 
 .overlay:target {
@@ -111,3 +129,30 @@ footer{
     opacity: 1;
 }
 
+.container{
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type=text], input[type=password], textarea {
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 2px solid black;
+}
+
+input[type="submit"]{
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 15px 50px;
+    font-size: 16px;
+}
