@@ -13,7 +13,7 @@ module.exports = class User {
             try {
                 const result = await db.query(`SELECT * FROM users;`)
                 const users = result.rows.map(u => new User(u))
-                resolve(authors);
+                resolve(users);
             } catch (err) {
                 reject("Error retrieving users")
             }
