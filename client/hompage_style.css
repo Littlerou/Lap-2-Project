@@ -80,3 +80,34 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+
+#signup {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border-radius: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: var(--background);
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
