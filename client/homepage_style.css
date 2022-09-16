@@ -110,8 +110,15 @@ footer{
 }
 
 .wrapper h2 {
-    font-size: 24px;
+    font-weight: bold;
+    font-size: 26px;
     text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper hr {
+    margin-top: 15px;
+    opacity: 0.5;
 }
 
 .wrapper .close {
@@ -150,9 +157,10 @@ input[type=text], input[type=password], textarea {
 
 input[type="submit"]{
     display: block;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 0 auto;
-    margin-top: 10px;
-    padding: 15px 50px;
+    margin-top: 15px;
+    padding: 15px 30px;
     font-size: 16px;
+    font-weight: bold;
 }
