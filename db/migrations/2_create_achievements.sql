@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS achievements;
+DROP TABLE IF EXISTS habits;
 
-CREATE TABLE achievements(
+CREATE TABLE habits(
     id serial PRIMARY KEY,
-    habits varchar(200) NOT NULL,
+    description varchar(100) NOT NULL,
     user_id int
 );
