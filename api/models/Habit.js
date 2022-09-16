@@ -1,6 +1,6 @@
 const db = require('../dbConfig/init');
 
-const User = reqiure('./User')
+const User = require('./User')
 
 module.exports = class Habit {
     constructor(data) {
