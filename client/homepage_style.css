@@ -8,16 +8,16 @@
     --text:#6A517B;
     --nav:#FAD4D8;
     --background:#FAD4D8;
-    --border:#9DBF9B;
-    /* #827191; */
-    
+    --border:#9DBF9B;    
     --navtext:#6A517B;
+    --font:'Courgette', cursive;
     
 }
 
 body{
     background-color: var(--background);
     color:var(--text);
+    font-family: var(--font);
 }
 
 #top-section{
@@ -152,7 +152,10 @@ input[type=text], input[type=password], textarea {
     margin-top: 10px;
     margin-bottom: 16px;
     font-size: 14px;
-    border: 2px solid black;
+    background-color:transparent;
+    border: none;
+    border-bottom: 2px solid var(--text);
+    font-family: var(--font);
 }
 
 input[type="submit"]{
@@ -163,4 +166,9 @@ input[type="submit"]{
     padding: 15px 30px;
     font-size: 16px;
     font-weight: bold;
+    background-color: var(--text);
+    color: var(--background);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font);
 }
