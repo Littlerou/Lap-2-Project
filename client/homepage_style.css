@@ -33,16 +33,15 @@ nav{
     justify-content: space-evenly;
     width: 50%;
     background-color:var(--nav) ;
-    padding:20px;
+    padding:30px;
     border-radius: 10px;
     border: 5px solid var(--border)
-    
-
-
 }
 h1{
-    font-size:40px;
+    font-size:60px;
     padding:20px;
+    padding-bottom: 10px;
+    border-bottom: 10px double var(--border);
 }
 
 a{
@@ -51,6 +50,7 @@ a{
     font-size:30px;
     font-weight: bold;
 }
+
 
 /* Make the images animation scrolling? */
 #middle-section{
