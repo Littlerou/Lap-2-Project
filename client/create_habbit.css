@@ -87,14 +87,20 @@ input{
     border:none;
     border-bottom: 5px solid var(--text);
     font-size: 15px;
+    color: var(--text);
 
 }
 
+::placeholder { 
+    color:var(--border);
+    opacity: 1; 
+  }
+
 label{
-    padding:20px;
+    padding:10px;
     padding-bottom: 5px;
     padding-left:0px ;
-    font-size: 30px;
+    font-size: 20px;
     width: 60%;
     font-family: var(--font);
 }
@@ -116,9 +122,20 @@ select{
     font-family: var(--font);
     border:2px solid var(--text);
     margin:10px;
+    color: var(--text);
 
 }
 
+h2{
+    margin: 20px;
+    font-size: 30px;
+}
+
+#form-header-div{
+    display: flex;
+    justify-content: left;
+    width: 65%;
+}
 footer{
     padding:30px;
     display: flex;
