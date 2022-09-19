@@ -1,0 +1,166 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text:#6A517B;
+    --nav:#FAD4D8;
+    --background:#FAD4D8;
+    --border:#9DBF9B;
+    /* #827191; */
+    
+    --navtext:#6A517B;
+    
+}
+
+body{
+    background-color: var(--background);
+    color:var(--text);
+}
+
+#top-section{
+    display:flex;
+    justify-content: space-around;
+    margin:30px;
+   ;
+}
+
+
+nav{
+    display:flex;
+    justify-content: space-evenly;
+    width: 50%;
+    background-color:var(--nav) ;
+    padding:20px;
+    border-radius: 10px;
+    border: 5px solid var(--border)
+    
+
+
+}
+h1{
+    font-size:40px;
+    padding:20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--navtext);
+    font-size:30px;
+    font-weight: bold;
+}
+
+/* Make the images animation scrolling? */
+#middle-section{
+    margin:50px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 30px;
+    
+}
+
+p{
+    padding:50px;
+    margin:50px;   
+    border:5px solid var(--border) ;
+    border-radius:10px;
+}
+
+img{
+    padding: 30px;
+    border: 5px solid var(--border);
+}
+
+footer{
+    padding:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#signup {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border-radius: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background-color: var(--background);
+    width: 30%;
+    position: relative;
+    border-radius: 10px;
+}
+
+.wrapper h2 {
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.wrapper hr {
+    margin-top: 15px;
+    opacity: 0.5;
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.close:hover {
+    color: red;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.container{
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type=text], input[type=password], textarea {
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    border: 2px solid black;
+}
+
+input[type="submit"]{
+    display: block;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
