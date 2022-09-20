@@ -23,7 +23,7 @@ module.exports = class User {
     static create(user){
         return new Promise (async (resolve, reject) => {
             try {
-                let userData = await db.query(`INSERT INTO user (name,password) VALUES ($1,$2) RETURNING *;`, [ user.name, user.password ]);
+                let userData = await db.query(`INSERT INTO users (name,password) VALUES ($1,$2) RETURNING *;`, [ user.name, user.password ]);
                 resolve(userData.rows[0]);
             } catch (err) {
                 reject('User could not be created');

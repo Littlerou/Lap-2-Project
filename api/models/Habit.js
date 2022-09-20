@@ -4,27 +4,42 @@ const User = require('./User')
 
 module.exports = class Habit {
     constructor(data) {
-        this.is = data.id
+        this.id = data.id
         this.description = data.description
-        this.user = {id: data.user_id, name: data.user_name }
+        this.userId = data.user_id
     }
 
-    static findByUserId(id){
+    static findById(id){
         return new Promise (async (resolve, reject) => {
             try {
-                let userData = await db.query(`SELECT * FROM habits WHERE user_id = $1;`, [ id ]);
-                resolve (userData.rows.map(u => new User(u)))
+                let habitData = await db.query(`SELECT * FROM habits WHERE id = $1;`, [ id ]);
+                resolve (new Habit(habitData.rows[0]))
             } catch (err) {
-                reject('User not found');
+                reject('Habit not found');
             };
         });
     };
 
-    static create(description,user_id){
+    static findByUserId(id){
         return new Promise (async (resolve, reject) => {
             try {
-                let habitData = await db.query(`INSERT INTO habits (description,user_id) VALUES ($1,$2) RETURNING *;`, [ description, user_id]);
-                new Habit(habitData.rows[0]);
+                let habitData = await db.query(`SELECT * FROM habits WHERE user_id = $1;`, [ id ]);
+                if(!!habitData.rows.length){
+                    resolve (habitData.rows.map(a => new Habit(a)))
+                } else {
+                    reject('User has no habits');
+                }
+            } catch (err) {
+                reject('Incorrect format');
+            };
+        });
+    };
+
+    static create(habit){
+        return new Promise (async (resolve, reject) => {
+            try {
+                let habitData = await db.query(`INSERT INTO habits (description,user_id) VALUES ($1,$2) RETURNING *;`, [ habit.description, habit.user_id]);
+                resolve (new Habit(habitData.rows[0]));
             } catch (err) {
                 reject('Habit could not be created');
             };

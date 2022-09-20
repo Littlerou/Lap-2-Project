@@ -11,7 +11,7 @@ const usersRoutes = require('./routes/users')
 
 server.get('/', (req, res) => res.send('Welcome to ACHIEVED'))
 
-server.use('/achievements', completedRoutes)
+server.use('/completion_dates', completedRoutes)
 server.use('/habits', habitsRoutes)
 server.use('/users', usersRoutes)
 
