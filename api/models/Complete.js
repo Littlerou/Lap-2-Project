@@ -3,14 +3,14 @@ const db = require('../dbConfig/init');
 module.exports = class Complete {
     constructor(data) {
         this.data = data.date
-        this.id = data.achievement_id
+        this.id = data.habit_id
     }
 
-    static findById(id){
+    static findByHabitId(id){
         return new Promise (async (resolve, reject) => {
             try {
-                let achievementData = await db.query(`SELECT * FROM authors WHERE id = $1;`, [ id ]);
-                resolve (achievementData.rows.map(a => new Complete(a)))
+                let completionDates = await db.query(`SELECT date FROM completed WHERE habit_id = $1;`, [ id ]);
+                resolve (new Complete(completionDates.rows[0]))
             } catch (err) {
                 reject('Achievement not found');
             };

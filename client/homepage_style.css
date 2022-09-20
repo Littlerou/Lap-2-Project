@@ -23,9 +23,10 @@ body{
 #top-section{
     display:flex;
     justify-content: space-around;
-    margin:30px;
-   ;
+    margin:30px 0px;
+
 }
+
 
 
 nav{
@@ -69,7 +70,7 @@ p{
     border-radius:10px;
 }
 
-img{
+#middle-section > img{
     padding: 30px;
     border: 5px solid var(--border);
 }
@@ -79,6 +80,14 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#logo{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    border: none;
+    /* margin:0px; */
 }
 
 

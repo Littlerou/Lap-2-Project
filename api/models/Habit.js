@@ -4,16 +4,16 @@ const User = require('./User')
 
 module.exports = class Habit {
     constructor(data) {
-        this.is = data.id
+        this.id = data.id
         this.description = data.description
-        this.user = {id: data.user_id, name: data.user_name }
+        this.user = data.user_id
     }
 
     static findByUserId(id){
         return new Promise (async (resolve, reject) => {
             try {
-                let userData = await db.query(`SELECT * FROM habits WHERE user_id = $1;`, [ id ]);
-                resolve (userData.rows.map(u => new User(u)))
+                let habitData = await db.query(`SELECT * FROM habits WHERE user_id = $1;`, [ id ]);
+                resolve (new Habit(habitData.rows[0]))
             } catch (err) {
                 reject('User not found');
             };
@@ -24,7 +24,7 @@ module.exports = class Habit {
         return new Promise (async (resolve, reject) => {
             try {
                 let habitData = await db.query(`INSERT INTO habits (description,user_id) VALUES ($1,$2) RETURNING *;`, [ description, user_id]);
-                new Habit(habitData.rows[0]);
+                resolve (new Habit(habitData.rows[0]));
             } catch (err) {
                 reject('Habit could not be created');
             };
@@ -34,7 +34,7 @@ module.exports = class Habit {
     destroy(){
         return new Promise(async(resolve, reject) => {
             try {
-                const result = await db.query(`DELETE FROM habits WHERE id = $1 RETURNING id`, [ this.id ]);
+                const result = await db.query(`DELETE FROM habits WHERE id = $1 RETURNING id`, [ data.user_id ]);
                 resolve(`Habit ${result.id} was deleted`)
             } catch (err) {
                 reject('Habit could not be deleted')
