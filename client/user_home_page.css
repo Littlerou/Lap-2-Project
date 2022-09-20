@@ -21,6 +21,17 @@ body{
     padding:20px;
 }
 
+nav{
+    display:flex;
+    justify-content: space-evenly;
+    width: 50%;
+    background-color:var(--nav) ;
+    padding:30px;
+    border-radius: 10px;
+    border: 5px solid var(--border)
+}
+
+
 p{
     font-size: 20px;
     font-weight: bold;
@@ -71,7 +82,8 @@ h3{
 
 .taskForm{
     margin-top: 40px;
-    border: 5px solid var(--border)
+    border: 5px solid var(--border);
+    border-radius: 5px;
 }
 
 .taskFormContent {
@@ -86,18 +98,34 @@ h3{
 
 #confirm {
     display: flex;
+    margin-top: 5px;
+}
+
+#yes {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+#no {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 input[type="radio"] {
+    margin-right: 6px;
+}
+
+.contentSearch {
+    font-size: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.contentSearch label {
     margin-right: 10px;
 }
 
-nav{
-    display:flex;
-    justify-content: space-evenly;
-    width: 50%;
-    background-color:var(--nav) ;
-    padding:30px;
-    border-radius: 10px;
-    border: 5px solid var(--border)
-}
