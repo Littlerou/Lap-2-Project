@@ -128,6 +128,8 @@ router.post('/login', usersController.showByUsername)
 
 ## Testing
 
+
+
 ## Future Features
 
 - Ability to suitably measure or track habit progress (eg. progress bar, percentage).
@@ -135,6 +137,8 @@ router.post('/login', usersController.showByUsername)
 - Make the calendar work for future dates.
 
 ## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors
 
