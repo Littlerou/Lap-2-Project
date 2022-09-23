@@ -15,6 +15,9 @@ The project was to develop a habit tracker app that provided the following funct
 3. [Routes](#routes)
 4. [Design](#site-design)
 5. [Wins & Challenges](#wins-&-challenges)
+6. [Future Features](#future-features)
+7. [Licence](#license)
+8. [Contributors](#contributors)
 
 ## Installation
 
@@ -99,10 +102,18 @@ router.post('/login', usersController.showByUsername)
 ![image](https://user-images.githubusercontent.com/86776447/191809963-e3b780fb-dbe8-422b-a062-cadad0874b94.png)
 ---
 #### *User home page*
-![image](https://user-images.githubusercontent.com/86776447/191810228-dcd7405e-af7b-44c6-9e1e-2c365c64a522.png)
+![image](https://user-images.githubusercontent.com/86776447/191918111-b200b648-e456-4171-8c55-a2be8a1be7d3.png)
 ---
 #### *Habit calendar*
 ![image](https://user-images.githubusercontent.com/86776447/191810350-788ae0df-8fa8-4a1c-82bf-54ccbedad3cb.png)
 ---
 #### *Create habit form*
-![image](https://user-images.githubusercontent.com/86776447/191810408-8143c277-28d9-4333-a72f-a877c84a2fd1.png)
+![image](https://user-images.githubusercontent.com/86776447/191918187-422fdb09-6c08-4177-8c4a-475b6660bb31.png)
+
+## Wins & Challenges
+
+## Future Features
+
+## License
+
+## Contributors
