@@ -10,16 +10,18 @@ The project was to develop a habit tracker app that provided the following funct
 
 ## Table of Contents
 
-1. [Installation](#installation)
+1. [Installation & Use](#installation--use)
 2. [Technologies](#technologies)
 3. [Routes](#routes)
 4. [Design](#site-design)
-5. [Wins & Challenges](#wins-&-challenges)
-6. [Future Features](#future-features)
-7. [Licence](#license)
-8. [Contributors](#contributors)
+5. [Wins & Challenges](#wins--challenges)
+6. [Code Snippets](#code-snippets)
+7. [Testing](#testing)
+8. [Future Features](#future-features)
+9. [Licence](#license)
+10. [Contributors](#contributors)
 
-## Installation
+## Installation & Use
 
 ### *Site*
 
@@ -112,8 +114,31 @@ router.post('/login', usersController.showByUsername)
 
 ## Wins & Challenges
 
+### Wins
+
+- Authorisation and authentication system is fully functional.
+- All data is successfully retrieved from the server and appropriately displayed client-side.
+- Testing coverage of over 60%.
+
+### Challenges
+
+- A way of updating the streak successfully. A date needs to be sent and validated on the server to make sure that the streak does not increment everytime a condition is met on the clients' end.
+
+## Code Snippets
+
+## Testing
+
 ## Future Features
+
+- Ability to suitably measure or track habit progress (eg. progress bar, percentage).
+- Further work on design to make it look cleaner/more responsive.
+- Make the calendar work for future dates.
 
 ## License
 
 ## Contributors
+
+### [Zulaika Ali](https://github.com/zlka)
+### [Stefan Mircea](https://github.com/babole)
+### [Isobel Melvin](https://github.com/littlerou)
+### [Matthew Blackman](https://github.com/ultimafinal1)
